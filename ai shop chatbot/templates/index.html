@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>مساعد المتجر</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+<body>
+    <div class="chat-container">
+        <h2>🤖 AI Store Chatbot</h2>
+        <div id="chat-box"></div>
+        
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Enter your question" />
+            <button id="send-btn" onclick="sendQuestion()">submit</button>
+        </div>
+    </div>
+
+    <script>
+        function sendQuestion() {
+            const input = document.getElementById("user-input");
+            const question = input.value.trim();
+            if (!question) return;
+
+            appendMessage("user", question);
+            input.value = "";
+
+            fetch("/ask", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({question: question})
+            })
+            .then(res => res.json())
+            .then(data => appendMessage("bot", data.answer));
+        }
+
+        function appendMessage(sender, text) {
+            const chatBox = document.getElementById("chat-box");
+            const msg = document.createElement("div");
+            msg.className = `message ${sender}`;
+
+            // 🕒 إضافة الوقت
+            const now = new Date();
+            const time = now.toLocaleTimeString([],{ hour: '2-digit', minute: '2-digit' });
+            msg.innerText =   `[${time}] ${text}`,
+           
+
+            chatBox.appendChild(msg);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        // ⌨️ إرسال عند الضغط على Enter
+        document.getElementById("user-input").addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                sendQuestion();
+            }
+        });
+    </script>
+</body>
+</html> 

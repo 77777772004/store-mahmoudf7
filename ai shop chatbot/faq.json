@@ -1,0 +1,63 @@
+[
+  {
+    "questions": [
+      "What is the shipping time?",
+      "How long does shipping take?",
+      "When will my order arrive?",
+      "When do I receive my package?",
+      "Delivery date?"
+    ],
+    "answer": "Shipping takes between 2 to 4 days depending on the city."
+  },
+  {
+    "questions": [
+      "Do you ship to all cities?",
+      "Where do you deliver?",
+      "Do you deliver to Upper Egypt?",
+      "Is delivery available everywhere?",
+      "Shipping coverage"
+    ],
+    "answer": "Yes, we deliver to all cities across Egypt including Upper Egypt."
+  },
+  {
+    "questions": [
+      "Can I pay on delivery?",
+      "Is cash on delivery available?",
+      "Can I pay when I receive the item?",
+      "Do you accept COD?",
+      "Payment on delivery"
+    ],
+    "answer": "Yes, cash on delivery is available for all orders within Egypt."
+  },
+  {
+    "questions": [
+      "What are the payment methods?",
+      "How can I pay?",
+      "Do you accept Vodafone Cash?",
+      "Is online payment available?",
+      "Payment options"
+    ],
+    "answer": "We support multiple payment methods: Vodafone Cash, bank transfer, and cash on delivery."
+  },
+  {
+    "questions": [
+      "Are the products original?",
+      "Is the product authentic?",
+      "Do you provide warranty?",
+      "Is there a guarantee?",
+      "Are your products guaranteed?"
+    ],
+    "answer": "All products are 100% original and guaranteed against manufacturing defects."
+  },
+  {
+    "questions": [
+      "Can I return the product?",
+      "Do you have a return policy?",
+      "How to return a product?",
+      "What if I don't like the item?",
+      "Return period?"
+    ],
+    "answer": "You can return the product within 14 days of delivery as long as it's in its original condition."
+  }
+]
+
